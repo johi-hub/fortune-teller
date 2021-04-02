@@ -1,0 +1,24 @@
+{
+  "name": "pair-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "cd server && node index.js",
+    "client": "cd client && npm run start",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sweetart-hub/pair-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sweetart-hub/pair-project/issues"
+  },
+  "homepage": "https://github.com/sweetart-hub/pair-project#readme",
+  "dependencies": {
+    "concurrently": "^6.0.0"
+  }
+}
