@@ -5,30 +5,27 @@ import axios from 'axios';
 
 
 function App() {
+const [data, setData]= useState('What does the future hold?')
 
 
-  useEffect(() => {
+const getData = () => {
   axios.get("/api/fortune")
-  .then(resp => console.log(resp))
+  .then(resp => setData(resp.data))
   .catch(error => console.log(error))
-  })
+}
+
+
+  const handleClick = () => {
+  getData();
+  }
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="crystal-ball">
+    <h1> THE FORTUNE TELLER </h1>
+    <h3> {data}</h3>
+    <button className="button" onClick={handleClick}>Click Here</button>
+    </div>
     </div>
   );
 }
