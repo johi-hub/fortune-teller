@@ -1,1 +1,1 @@
-This is a fortune telling app. It is a paired-project made while studying at BrianStation. Still in progress. 
+This is a fortune telling app. It's a paired-project made while studying at BrianStation. Still in progress. 
